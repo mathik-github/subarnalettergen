@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Renewal Invitation</title>
+<style>
+th,td {
+text-align:left;
+padding:10px;
+font-size:13px;
+}
+</style>
+
+</head>
+<body>
+<div class="header">
+	<img th:src="@{classpath:/static/images/letterheadernew.jpg}" width="160"
+		height="40" />
+		</div>
+	<div class ="address">
+	<p>
+		<span th:text="${LetterDate}"></span></p><br></br>
+	
+
+	<p>
+		<span th:text="${NAME}"></span>	<br></br>
+	
+		<span th:text="${ADDRESS1}"></span>	<br></br>
+	
+		<span th:text="${ADDRESS2}"></span>	<br></br>
+	
+		<span th:text="${ADDRESS3}"></span>
+	</p>
+	</div>
+	<br></br>
+<div class="content">
+	<p>Dear Policyholder,</p>
+	 </div>
+	<br></br>
+	
+<div>
+	<p>Thank you for insuring with Income.<br></br></p>
+	
+	<p>
+		<strong>
+			<MANAGED HEALTHCARE SYSTEM - ENTRY AGE>
+		</strong>
+	</p>
+	<p>
+		<strong>
+			POLICY NO:
+			<span th:text=" ${PolicyNo}"></span>
+		</strong>
+	</p>
+
+		
+<div>
+
+<p>According to our records, we noted that LEE GHEE TONG has reached 80 years old upon renewal. As the
+MHS policy does not provide coverage beyond this age, we will not be inviting you/dependant (if any) for
+further renewal.</p>
+<p> We would like to extend our sincere appreciation of your past support.</p>
+
+<p>f you have any questions, please contact your insurance adviser, SBBX XXXX XGCD at 88888888.
+Alternatively, you can call our customer service officers at 6332 1133 or email us at
+healthcare@income.com.sg. We would be most happy to help you.</p>
+	<p>
+		<span th:text="${FREETEXT}"></span>
+	</p>
+
+	<p>
+		<span th:text="${FREETEXT1}"></span>
+	</p>
+
+	<p>
+		<span th:text="${FREETEXT2}"></span>
+	</p>
+	</div>
+	</div>
+	<br />
+	<p>This letter requires no signature.</p>
+
+    <p>cc Insurance Adviser: SBBX XXXX XGCD (6290001)</p>
+	<div class="footer">
+	<img th:src="@{classpath:/static/images/letterfooter_new.jpg}" width="500"
+		height="60" />
+	</div>
+</body>
+</html>
